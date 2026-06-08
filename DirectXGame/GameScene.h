@@ -1,5 +1,7 @@
 #pragma once
 #include "KamataEngine.h"
+#include "ball.h"
+
 
 using namespace KamataEngine;
 
@@ -34,7 +36,13 @@ private:
 	Camera* camera_ = nullptr;
 
 	// モデル
-	Model* model = nullptr;
+	Model* model_ = nullptr;
 
 	bool isFinished_ = false;
+
+	private:
+    // ボール本体
+    Ball* ball_ = nullptr;
+    // ボールの3Dモデルデータ
+    Model* ballModel_ = nullptr;
 };
